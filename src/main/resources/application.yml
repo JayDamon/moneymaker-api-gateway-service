@@ -1,3 +1,49 @@
 spring:
   application:
     name: Gateway
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 8080
+
+---
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: budgets
+          uri: lb://OAKA/
+          predicates:
+            - Path=/v1/budgets/**
+        - id: accounts
+          uri: lb://OAKA/
+          predicates:
+            - Path=/v1/accounts/**
+        - id: budgetCategories
+            uri: lb://OAKA/
+            predicates:
+              - Path=/v1/budgetCategories/**
+        - id: budgetTypes
+            uri: lb://OAKA/
+            predicates:
+              - Path=/v1/budgetTypes/**
+        - id: frequencyTypes
+            uri: lb://OAKA/
+            predicates:
+              - Path=/v1/frequencyTypes/**
+        - id: transactions
+            uri: lb://OAKA/
+            predicates:
+              - Path=/v1/transactions/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: false
+
