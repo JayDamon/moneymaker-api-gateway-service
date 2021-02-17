@@ -19,7 +19,7 @@ spring:
     gateway:
       routes:
         - id: budgets
-          uri: lb://OAKA/
+          uri: lb://RIN/
           predicates:
             - Path=/v1/budgets/**
         - id: accounts
@@ -31,17 +31,17 @@ spring:
           predicates:
             - Path=/v1/account-types/**
         - id: budgetCategories
-          uri: lb://OAKA/
+          uri: lb://RIN/
           predicates:
-            - Path=/v1/budgetCategories/**
+            - Path=/v1/budget-categories/**
         - id: budgetTypes
-          uri: lb://OAKA/
+          uri: lb://RIN/
           predicates:
-            - Path=/v1/budgetTypes/**
+            - Path=/v1/budget-types/**
         - id: frequencyTypes
-          uri: lb://OAKA/
+          uri: lb://RIN/
           predicates:
-            - Path=/v1/frequencyTypes/**
+            - Path=/v1/frequency-types/**
         - id: transactions
           uri: lb://OAKA/
           predicates:
