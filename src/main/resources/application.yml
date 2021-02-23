@@ -11,43 +11,29 @@ management:
       show-details: always
 server:
   port: 8080
+debug: true
+eureka:
+  client:
+    register-with-eureka: false
 
 ---
 
 spring:
   cloud:
     gateway:
-      routes:
-        - id: budgets
-          uri: lb://RIN/
-          predicates:
-            - Path=/v1/budgets/**
-        - id: accounts
-          uri: lb://SETZER/
-          predicates:
-            - Path=/v1/accounts/**
-        - id: accounts
-          uri: lb://SETZER/
-          predicates:
-            - Path=/v1/account-types/**
-        - id: budgetCategories
-          uri: lb://RIN/
-          predicates:
-            - Path=/v1/budget-categories/**
-        - id: budgetTypes
-          uri: lb://RIN/
-          predicates:
-            - Path=/v1/budget-types/**
-        - id: frequencyTypes
-          uri: lb://RIN/
-          predicates:
-            - Path=/v1/frequency-types/**
-        - id: transactions
-          uri: lb://OAKA/
-          predicates:
-            - Path=/v1/transactions/**
       discovery:
         locator:
           enabled: true
           lower-case-service-id: false
-
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders:
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
