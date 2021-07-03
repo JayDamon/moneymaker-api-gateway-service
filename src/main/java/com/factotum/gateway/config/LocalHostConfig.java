@@ -12,12 +12,12 @@ public class LocalHostConfig {
     public RouteLocator localHostRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r -> r.path("/v1/accounts/**", "/v1/accounts*", "/v1/account-types/**")
-                        .uri("lb://SETZER"))
+                        .uri("lb://setzer-account-service"))
                 .route(r -> r.path("/v1/transactions/**")
-                        .uri("lb://OAKA/"))
+                        .uri("lb://oaka-transaction-service/"))
                 .route(r -> r.path("/v1/budgets/**", "/v1/budget-categories/**",
                         "/v1/budget-types/**", "/v1/frequency-types/**")
-                        .uri("lb://RIN/"))
+                        .uri("lb://rin-budget-service/"))
                 .build();
     }
 
