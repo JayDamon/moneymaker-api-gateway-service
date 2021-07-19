@@ -11,7 +11,7 @@ jobs:
   build-and-test:
     docker:
       - image: cimg/openjdk:16.0.0
-      - image: cimg/node:latest
+      - image: cimg/node:current
     steps:
       - checkout
       - restore_cache:
