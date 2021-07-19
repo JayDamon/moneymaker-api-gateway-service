@@ -7,13 +7,11 @@ workflows:
           context:
             - docker-login
 
-orbs:
-  node: circleci/node@4.5.1
-
 jobs:
   build-and-test:
     docker:
       - image: cimg/openjdk:16.0.0
+      - image: cimg/node:latest
     steps:
       - checkout
       - restore_cache:
