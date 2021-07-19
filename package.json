@@ -25,13 +25,13 @@
     ],
     "plugins": [
       [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
+        }
+      ],
+      [
         "@semantic-release/release-notes-generator",
-        [
-          "@semantic-release/exec",
-          {
-            "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
-          }
-        ],
         {
           "preset": "angular",
           "parserOpts": {
@@ -70,7 +70,7 @@
       [
         "@semantic-release-plus/docker",
         {
-          "name": "repo.treescale.com/jaydamon/moneymaker/cid-client",
+          "name": "repo.treescale.com/jaydamon/moneymaker/gateway",
           "registryUrl": "repo.treescale.com",
           "publishLatestTag": true,
           "publishMajorTag": true,
