@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Setup VirtualEnv
           command: |
-            echo 'export IMAGE_NAME=moneymaker/gateway' >> $BASH_ENV
+            echo 'export IMAGE_NAME=mm-gateway' >> $BASH_ENV
             echo 'export DOCKER_REPOSITORY=repo.treescale.com/jaydamon' >> $BASH_ENV
       - run:
           name: setup semantic-release

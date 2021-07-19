@@ -54,7 +54,7 @@
       [
         "@semantic-release-plus/docker",
         {
-          "name": "repo.treescale.com/jaydamon/moneymaker/gateway",
+          "name": "repo.treescale.com/jaydamon/mm-gateway",
           "registryUrl": "repo.treescale.com",
           "publishLatestTag": true,
           "publishMajorTag": true,
