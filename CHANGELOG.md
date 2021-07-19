@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/JayDamon/gateway/compare/v1.0.2...v1.1.0) (2021-07-19)
+
+
+### Features
+
+* **CI:** Use global npm for build ([4421944](https://github.com/JayDamon/gateway/commit/4421944d2eb80ac360190068259285e88d2301f4))
+
 ## [1.0.2](https://github.com/JayDamon/gateway/compare/v1.0.1...v1.0.2) (2021-07-19)
 
 
