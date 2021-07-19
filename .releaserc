@@ -4,29 +4,12 @@
   "debug": true,
   "plugins": [
     "@semantic-release/commit-analyzer",
-    [
-      "@semantic-release/release-notes-generator",
-      {
-        "preset": "angular",
-        "parserOpts": {
-          "noteKeywords": [
-            "BREAKING CHANGE",
-            "BREAKING CHANGES",
-            "BREAKING"
-          ]
-        },
-        "writerOpts": {
-          "commitsSort": [
-            "subject",
-            "scope"
-          ]
-        }
-      }
-    ],
+    "@semantic-release/release-notes-generator",
     [
       "@semantic-release/changelog",
       {
-        "changelogFile": "CHANGELOG.md"
+        "changelogFile": "CHANGELOG.md",
+        "changelogTitle": "# Semantic Versioning Changelog"
       }
     ],
     [
@@ -35,23 +18,15 @@
         "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
       }
     ],
+    "@semantic-release/github",
     [
       "@semantic-release/git",
       {
         "assets": [
-          "CHANGELOG.md",
-          "pom.xml"
-        ]
-      }
-    ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": [
-          {
-            "path": "release/**"
-          }
-        ]
+          "pom.xmln",
+          "CHANGELOG.md"
+        ],
+        "message": "release: ${nextRelease.version} \n\n${nextRelease.notes}"
       }
     ],
     [
