@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.0.2](https://github.com/JayDamon/gateway/compare/v1.0.1...v1.0.2) (2021-07-19)
+
+
+### Bug Fixes
+
+* **CI:** update git repo name ([c6a2955](https://github.com/JayDamon/gateway/commit/c6a29554cdc662e43ad2fcf4695a8d9b823185ef))
+
 ## [1.0.1](https://github.com/JayDamon/gateway/compare/v1.0.0...v1.0.1) (2021-07-19)
 
 
