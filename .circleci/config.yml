@@ -7,6 +7,9 @@ workflows:
           context:
             - docker-login
 
+orbs:
+  node: circleci/node@4.5.1
+
 jobs:
   build-and-test:
     docker:
@@ -32,6 +35,9 @@ jobs:
           command: |
             echo 'export IMAGE_NAME=moneymaker/cid-client' >> $BASH_ENV
             echo 'export DOCKER_REPOSITORY=repo.treescale.com/jaydamon' >> $BASH_ENV
+      - run:
+          name: setup semantic-release
+          command: npm install -g semantic-release "@semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec semantic-release/git @semantic-release/github @semantic-release-plus/docker
       - setup_remote_docker:
           version: 19.03.13
       - run:
