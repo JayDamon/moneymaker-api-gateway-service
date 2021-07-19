@@ -4,26 +4,19 @@
   "debug": true,
   "plugins": [
     "@semantic-release/commit-analyzer",
-//    "@semantic-release/release-notes-generator",
-//    [
-//      "@semantic-release/changelog",
-//      {
-//        "changelogFile": "CHANGELOG.md",
-//        "changelogTitle": "# Semantic Versioning Changelog"
-//      }
-//    ],
-//    [
-//      "@semantic-release/exec",
-//      {
-//        "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
-//      }
-//    ],
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
+      }
+    ],
     "@semantic-release/github",
     [
       "@semantic-release/git",
       {
         "assets": [
-          "pom.xmln",
+          "pom.xml",
           "CHANGELOG.md"
         ],
         "message": "release: ${nextRelease.version} \n\n${nextRelease.notes}"
