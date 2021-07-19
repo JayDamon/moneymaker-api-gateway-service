@@ -1,0 +1,67 @@
+{
+  "branches": "main",
+  "repositoryUrl": "https://github.com/JayDamon/gateway.git",
+  "debug": true,
+  "plugins": [
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "angular",
+        "parserOpts": {
+          "noteKeywords": [
+            "BREAKING CHANGE",
+            "BREAKING CHANGES",
+            "BREAKING"
+          ]
+        },
+        "writerOpts": {
+          "commitsSort": [
+            "subject",
+            "scope"
+          ]
+        }
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "CHANGELOG.md",
+          "pom.xml"
+        ]
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "release/**"
+          }
+        ]
+      }
+    ],
+    [
+      "@semantic-release-plus/docker",
+      {
+        "name": "repo.treescale.com/jaydamon/moneymaker/gateway",
+        "registryUrl": "repo.treescale.com",
+        "publishLatestTag": true,
+        "publishMajorTag": true,
+        "publishMinorTag": true
+      }
+    ]
+  ]
+}

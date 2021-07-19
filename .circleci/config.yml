@@ -1,0 +1,39 @@
+version: 2.1
+
+workflows:
+  my-workflow:
+    jobs:
+      - build-and-test:
+          context:
+            - docker-login
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/openjdk:16.0.0
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-maven-debs-{{ checksum "pom.xml" }}
+            - v1-maven-debs
+      - run:
+          name: Test
+          command: ./mvnw clean test
+      - run:
+          name: Package
+          command: ./mvnw clean package -DskipTests
+      - save_cache:
+          key: v1-maven-debs-{{ checksum "pom.xml" }}
+      - run:
+          name: Setup VirtualEnv
+          command: |
+            echo 'export IMAGE_NAME=moneymaker/cid-client' >> $BASH_ENV
+            echo 'export DOCKER_REPOSITORY=repo.treescale.com/jaydamon' >> $BASH_ENV
+      - setup_remote_docker:
+          version: 19.03.13
+      - run:
+          name: Build and push Docker image
+          command: |
+            docker build -t $DOCKER_REPOSITORY/$IMAGE_NAME .
+            npm run semantic-release || true
