@@ -1,0 +1,79 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JayDamon/gateway.git"
+  },
+  "author": "jaydamon",
+  "private": true,
+  "dependencies": {
+    "@semantic-release-plus/docker": "^2.3.3",
+    "@semantic-release/release-notes-generator": "^9.0.3",
+    "semantic-release": "^17.4.4"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/release-notes-generator",
+        [
+          "@semantic-release/exec",
+          {
+            "prepareCmd": "./prepare-release.sh ${nextRelease.version}"
+          }
+        ],
+        {
+          "preset": "angular",
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES",
+              "BREAKING"
+            ]
+          },
+          "writerOpts": {
+            "commitsSort": [
+              "subject",
+              "scope"
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "pom.xml",
+            "CHANGELOG.md"
+          ],
+          "message": "release: ${nextRelease.version} \n\n${nextRelease.notes}"
+        }
+      ],
+      [
+        "@semantic-release-plus/docker",
+        {
+          "name": "repo.treescale.com/jaydamon/moneymaker/cid-client",
+          "registryUrl": "repo.treescale.com",
+          "publishLatestTag": true,
+          "publishMajorTag": true,
+          "publishMinorTag": true
+        }
+      ]
+    ]
+  }
+}
