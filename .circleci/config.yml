@@ -25,6 +25,8 @@ jobs:
           command: ./mvnw clean package -DskipTests
       - save_cache:
           key: v1-maven-debs-{{ checksum "pom.xml" }}
+          paths:
+            - ~/.m2
       - run:
           name: Setup VirtualEnv
           command: |
