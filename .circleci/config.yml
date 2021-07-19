@@ -44,4 +44,3 @@ jobs:
           command: |
             docker build -t $DOCKER_REPOSITORY/$IMAGE_NAME .
             npx semantic-release || true
-#            npx run semantic-release || true
