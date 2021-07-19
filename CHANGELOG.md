@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.0.1](https://github.com/JayDamon/gateway/compare/v1.0.0...v1.0.1) (2021-07-19)
+
+
+### Bug Fixes
+
+* **CI:** change image name ([a2012bd](https://github.com/JayDamon/gateway/commit/a2012bddbd04c2a3310c6975dff9936ee47a7c91))
+
 # 1.0.0 (2021-07-19)
 
 
