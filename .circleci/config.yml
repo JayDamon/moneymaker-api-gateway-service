@@ -43,4 +43,5 @@ jobs:
           name: Build and push Docker image
           command: |
             docker build -t $DOCKER_REPOSITORY/$IMAGE_NAME .
-            npm run semantic-release || true
+            npx semantic-release || true
+#            npx run semantic-release || true
