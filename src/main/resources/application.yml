@@ -11,10 +11,25 @@ management:
       show-details: always
 server:
   port: 8080
-debug: true
-eureka:
-  client:
-    register-with-eureka: false
+
+---
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8079
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev, prod
+  boot:
+    admin:
+      client:
+        url: moneymaker-admin-service
 
 ---
 
