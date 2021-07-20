@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.1.1](https://github.com/JayDamon/gateway/compare/v1.1.0...v1.1.1) (2021-07-20)
+
+
+### Bug Fixes
+
+* **admin:** Configure admin functionality ([210b771](https://github.com/JayDamon/gateway/commit/210b771d09b114f23873f2d4fbf05d28b8ec9877))
+
 # [1.1.0](https://github.com/JayDamon/gateway/compare/v1.0.2...v1.1.0) (2021-07-19)
 
 
