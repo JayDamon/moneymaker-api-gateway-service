@@ -29,7 +29,7 @@ spring:
   boot:
     admin:
       client:
-        url: moneymaker-admin-service
+        url: //moneymaker-admin-service:8079
 
 ---
 
