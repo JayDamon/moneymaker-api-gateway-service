@@ -6,7 +6,8 @@ spring:
         service-labels:
           discoverable: true
       enabled: true
-      client:
-        no-proxy:
+      reload:
+        strategy: restart_context
+        enabled: true
     discovery:
       enabled: false
