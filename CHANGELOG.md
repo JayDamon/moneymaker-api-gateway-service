@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/JayDamon/gateway/compare/v1.1.2...v1.2.0) (2021-07-21)
+
+
+### Features
+
+* **kubernetes:** add kubernetes config ([36853dd](https://github.com/JayDamon/gateway/commit/36853dd29d31621cfd94d86f4e95050479233ad4))
+
 ## [1.1.2](https://github.com/JayDamon/gateway/compare/v1.1.1...v1.1.2) (2021-07-20)
 
 
