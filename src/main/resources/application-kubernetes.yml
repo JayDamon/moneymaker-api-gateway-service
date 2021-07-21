@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    kubernetes:
+      discovery:
+        enabled: true
+        service-labels:
+          discoverable: true
+      enabled: true
+      client:
+        no-proxy:
+    discovery:
+      enabled: false
