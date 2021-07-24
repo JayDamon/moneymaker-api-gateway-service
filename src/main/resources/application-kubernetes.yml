@@ -9,5 +9,10 @@ spring:
       reload:
         strategy: restart_context
         enabled: true
-    discovery:
-      enabled: false
+eureka:
+  client:
+    enabled: false
+management:
+  endpoint:
+    restart:
+      enabled: true

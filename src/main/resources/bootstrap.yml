@@ -1,0 +1,7 @@
+spring:
+  config:
+    activate:
+      on-profile: local, test
+  cloud:
+    kubernetes:
+      enabled: false
