@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.3](https://github.com/JayDamon/gateway/compare/v1.2.2...v1.2.3) (2021-07-25)
+
+
+### Bug Fixes
+
+* **config:** Remove discovery filter ([d0f7f83](https://github.com/JayDamon/gateway/commit/d0f7f830b85a748b200a4e7078a3b74272d27ca5))
+
 ## [1.2.2](https://github.com/JayDamon/gateway/compare/v1.2.1...v1.2.2) (2021-07-25)
 
 
