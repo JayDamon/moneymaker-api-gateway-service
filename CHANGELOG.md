@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.1](https://github.com/JayDamon/gateway/compare/v1.2.0...v1.2.1) (2021-07-21)
+
+
+### Bug Fixes
+
+* **kubernetes:** add hot reload of props and rename ([ed18b76](https://github.com/JayDamon/gateway/commit/ed18b76ddb4d58f5a85d32b238fcd65c7fc11230))
+
 # [1.2.0](https://github.com/JayDamon/gateway/compare/v1.1.2...v1.2.0) (2021-07-21)
 
 
