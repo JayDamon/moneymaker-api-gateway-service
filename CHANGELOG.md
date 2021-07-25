@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.6](https://github.com/JayDamon/gateway/compare/v1.2.5...v1.2.6) (2021-07-25)
+
+
+### Bug Fixes
+
+* **ci:** disable config class ([cc71f3a](https://github.com/JayDamon/gateway/commit/cc71f3ac6c568f9ff50e8a2efc6ea4d89221215a))
+
 ## [1.2.5](https://github.com/JayDamon/gateway/compare/v1.2.4...v1.2.5) (2021-07-25)
 
 
