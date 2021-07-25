@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.5](https://github.com/JayDamon/gateway/compare/v1.2.4...v1.2.5) (2021-07-25)
+
+
+### Bug Fixes
+
+* **ci:** add temporary gateway client retrieval endpoint ([b9c0605](https://github.com/JayDamon/gateway/commit/b9c06051b79367112aefdbafd78fa2d962a1fe4f))
+
 ## [1.2.4](https://github.com/JayDamon/gateway/compare/v1.2.3...v1.2.4) (2021-07-25)
 
 
