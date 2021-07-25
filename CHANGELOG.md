@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.4](https://github.com/JayDamon/gateway/compare/v1.2.3...v1.2.4) (2021-07-25)
+
+
+### Bug Fixes
+
+* **ci:** update for kubernetes discovery ([5607241](https://github.com/JayDamon/gateway/commit/5607241120279223f59ba208c9eef95cce80ab1a))
+
 ## [1.2.3](https://github.com/JayDamon/gateway/compare/v1.2.2...v1.2.3) (2021-07-25)
 
 
