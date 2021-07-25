@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.2](https://github.com/JayDamon/gateway/compare/v1.2.1...v1.2.2) (2021-07-25)
+
+
+### Bug Fixes
+
+* **kubernetes:** change kubernetes properties ([bca2bfa](https://github.com/JayDamon/gateway/commit/bca2bfaf3715d9f4b9b2f397a2fb8c735bad097d))
+
 ## [1.2.1](https://github.com/JayDamon/gateway/compare/v1.2.0...v1.2.1) (2021-07-21)
 
 
