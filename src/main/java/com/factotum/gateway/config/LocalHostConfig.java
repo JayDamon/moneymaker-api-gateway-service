@@ -11,13 +11,12 @@ public class LocalHostConfig {
     @Bean
     public RouteLocator localHostRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(r -> r.path("/v1/accounts/**", "/v1/accounts*", "/v1/account-types/**")
-                        .uri("lb://setzer-account-service"))
+                .route(r -> r.path("/v1/accounts/**")
+                        .uri("http://moneymaker-account-service/"))
                 .route(r -> r.path("/v1/transactions/**")
-                        .uri("lb://oaka-transaction-service/"))
-                .route(r -> r.path("/v1/budgets/**", "/v1/budget-categories/**",
-                        "/v1/budget-types/**", "/v1/frequency-types/**")
-                        .uri("lb://rin-budget-service/"))
+                        .uri("http://moneymaker-transaction-service/"))
+                .route(r -> r.path("/v1/budgets/**")
+                        .uri("http://moneymaker-budget-service/"))
                 .build();
     }
 
