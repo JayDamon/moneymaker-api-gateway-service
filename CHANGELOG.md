@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/JayDamon/gateway/compare/v1.2.6...v1.3.0) (2021-07-27)
+
+
+### Features
+
+* add local docker and reinstate LocalHostConfig ([81eb7b4](https://github.com/JayDamon/gateway/commit/81eb7b41bf8fe25bc0f52655a9bfe6a657f8b514))
+
 ## [1.2.6](https://github.com/JayDamon/gateway/compare/v1.2.5...v1.2.6) (2021-07-25)
 
 
