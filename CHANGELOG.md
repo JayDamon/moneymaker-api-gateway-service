@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.4.0](https://github.com/JayDamon/gateway/compare/v1.3.0...v1.4.0) (2021-08-05)
+
+
+### Features
+
+* Add key passthrough and prepare for endpoint lockdown ([8464330](https://github.com/JayDamon/gateway/commit/8464330edeb8623a7a76d2d4cabd1f94b91779a7))
+
 # [1.3.0](https://github.com/JayDamon/gateway/compare/v1.2.6...v1.3.0) (2021-07-27)
 
 
