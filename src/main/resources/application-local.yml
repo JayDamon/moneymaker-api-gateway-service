@@ -15,12 +15,25 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "http://localhost:4200"
+            allowedOrigins: "*"
             allowedHeaders:
               - content-type
+              - authorization
             allowedMethods:
               - GET
               - POST
               - PUT
               - PATCH
               - DELETE
+              - OPTIONS
+        add-to-simple-url-handler-mapping: true
+
+---
+
+debug: true
+logging:
+  level:
+    root: WARN
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
