@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class RouteConfig {
 
     @Bean
-    public RouteLocator localHostRoutes(RouteLocatorBuilder builder, TokenRelayGatewayFilterFactory filterFactory
+    public RouteLocator routes(RouteLocatorBuilder builder, TokenRelayGatewayFilterFactory filterFactory
     ) {
         return builder.routes()
                 .route(r -> r.path("/v1/accounts/**")
