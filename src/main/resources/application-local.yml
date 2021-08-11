@@ -30,7 +30,6 @@ spring:
 
 ---
 
-debug: true
 logging:
   level:
     root: WARN
