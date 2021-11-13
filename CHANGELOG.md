@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.5.0](https://github.com/JayDamon/gateway/compare/v1.4.0...v1.5.0) (2021-11-13)
+
+
+### Features
+
+* **jdk:** Java 17 upgrade ([30181af](https://github.com/JayDamon/gateway/commit/30181afb986aca765a0c7ed7380ed5566ebf844f))
+
 # [1.4.0](https://github.com/JayDamon/gateway/compare/v1.3.0...v1.4.0) (2021-08-05)
 
 
