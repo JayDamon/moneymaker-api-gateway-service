@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.6.0](https://github.com/JayDamon/gateway/compare/v1.5.0...v1.6.0) (2021-11-22)
+
+
+### Features
+
+* **ci:** Update ci with new build script ([2b2eff4](https://github.com/JayDamon/gateway/commit/2b2eff424746d249379ceae8554cf219bbb80feb))
+
 # [1.5.0](https://github.com/JayDamon/gateway/compare/v1.4.0...v1.5.0) (2021-11-13)
 
 
