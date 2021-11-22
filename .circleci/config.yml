@@ -40,8 +40,11 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
       - run:
-          name: Build and push Docker image
+          name: Prepare Release
           command: |
-            docker build -t $DOCKER_REPOSITORY/$IMAGE_NAME .
             chmod +x ./prepare-release.sh
             /home/circleci/npm/bin/semantic-release
+      - run:
+          name: Build and Push Image
+          command: |
+            bash docker_build_push.sh $DOCKER_REPOSITORY/$IMAGE_NAME $DOCKER_USERNAME $DOCKER_PWD
