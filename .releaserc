@@ -1,6 +1,6 @@
 {
   "branches": ["main"],
-  "repositoryUrl":"https://github.com/JayDamon/gateway.git",
+  "repositoryUrl":"https://github.com/JayDamon/moneymaker-api-gateway-service .git",
   "debug": "true",
   "plugins": [
     "@semantic-release/commit-analyzer",
