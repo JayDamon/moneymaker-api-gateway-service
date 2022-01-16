@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.6.1](https://github.com/JayDamon/moneymaker-api-gateway-service/compare/v1.6.0...v1.6.1) (2022-01-16)
+
+
+### Bug Fixes
+
+* **build:** Update docker java version ([095640d](https://github.com/JayDamon/moneymaker-api-gateway-service/commit/095640daf3fde5d0ed22ed080b58da98d78ad1b7))
+
 # [1.6.0](https://github.com/JayDamon/gateway/compare/v1.5.0...v1.6.0) (2021-11-22)
 
 
