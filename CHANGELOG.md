@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.6.2](https://github.com/JayDamon/moneymaker-api-gateway-service/compare/v1.6.1...v1.6.2) (2022-01-16)
+
+
+### Bug Fixes
+
+* **local:** fix local allowed origins ([a4ba8a4](https://github.com/JayDamon/moneymaker-api-gateway-service/commit/a4ba8a4bff5b8fcc7a99617e4241d418297301c9))
+
 ## [1.6.1](https://github.com/JayDamon/moneymaker-api-gateway-service/compare/v1.6.0...v1.6.1) (2022-01-16)
 
 
