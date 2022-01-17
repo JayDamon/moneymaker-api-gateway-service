@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.7.0](https://github.com/JayDamon/moneymaker-api-gateway-service/compare/v1.6.2...v1.7.0) (2022-01-17)
+
+
+### Features
+
+* **spring:** update spring boot and spring cloud version ([2763c77](https://github.com/JayDamon/moneymaker-api-gateway-service/commit/2763c77c99cd8aab6efaa013b820ac3ee073c464))
+
 ## [1.6.2](https://github.com/JayDamon/moneymaker-api-gateway-service/compare/v1.6.1...v1.6.2) (2022-01-16)
 
 
