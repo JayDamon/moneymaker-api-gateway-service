@@ -1,22 +1,13 @@
 spring:
   cloud:
     discovery:
-      enabled: true
-eureka:
-  client:
-    enabled: true
-    serviceUrl:
-      defaultZone: http://mm-eureka:8761/eureka/
+      enabled: false
 
 ---
 
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: false
       globalcors:
         corsConfigurations:
           '[/**]':
