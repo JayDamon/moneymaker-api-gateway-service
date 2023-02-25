@@ -1,7 +1,7 @@
 spring:
   cloud:
     discovery:
-      enabled: true
+      enabled: false
 
 ---
 
@@ -10,7 +10,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: false
           lower-case-service-id: false
       globalcors:
         corsConfigurations:
@@ -30,9 +30,18 @@ spring:
 
 ---
 
+spring:
+  boot:
+    admin:
+      client:
+        enabled: true
+        url: http://localhost:8079
+
+---
+
 logging:
   level:
     root: WARN
-    org.springframework.web: INFO
-    org.springframework.security: DEBUG
-    org.springframework.security.oauth2: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO

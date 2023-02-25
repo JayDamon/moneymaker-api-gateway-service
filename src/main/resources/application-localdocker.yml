@@ -1,17 +1,26 @@
 spring:
   cloud:
     discovery:
-      enabled: false
+      enabled: true
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
 
 ---
 
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: false
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "http://localhost:4200, http://localhost:8081"
+            allowedOrigins: "*"
             allowedHeaders:
               - content-type
               - authorization
@@ -21,3 +30,19 @@ spring:
               - PUT
               - PATCH
               - DELETE
+
+---
+
+logging:
+  level:
+    root: WARN
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+
+---
+
+user-service:
+  url: http://moneymaker-user-service:8091/
+account-link-service:
+  url: http://moneymaker-account-link-service:3000/
