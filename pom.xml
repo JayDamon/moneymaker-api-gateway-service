@@ -12,7 +12,7 @@
 
 	<groupId>com.factotum</groupId>
 	<artifactId>moneymaker-api-gateway-service</artifactId>
-	<version>1.7.0</version>
+	<version>1.7.1</version>
 	<name>moneymaker-api-gateway-service</name>
 	<description>API Gateway for the moneymaker backend.</description>
 
