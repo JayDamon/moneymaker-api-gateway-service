@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [1.7.1](https://github.com/JayDamon/moneymaker-api-gateway-service/compare/v1.7.0...v1.7.1) (2024-09-23)
+
+
+### Bug Fixes
+
+* add github login for semantic release ([769474e](https://github.com/JayDamon/moneymaker-api-gateway-service/commit/769474e21e3045a23884e01f4002cc235f1c04ef))
+* Run ci ([#2](https://github.com/JayDamon/moneymaker-api-gateway-service/issues/2)) ([1b3e8e9](https://github.com/JayDamon/moneymaker-api-gateway-service/commit/1b3e8e98c9b753ec0fddbe6c3cb3e9aa8c13cded))
+
 # [1.7.0](https://github.com/JayDamon/moneymaker-api-gateway-service/compare/v1.6.2...v1.7.0) (2022-01-17)
 
 
