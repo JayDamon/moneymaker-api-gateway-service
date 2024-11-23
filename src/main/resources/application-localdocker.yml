@@ -42,6 +42,8 @@ logging:
 
 ---
 
+transaction-service:
+  url: http://transaction-update-service:8093/
 user-service:
   url: http://user-service:8091/
 account-link-service:
