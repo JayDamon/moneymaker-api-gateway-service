@@ -42,7 +42,9 @@ logging:
 
 ---
 
+transaction-service:
+  url: http://transaction-update-service:8093/
 user-service:
-  url: http://moneymaker-user-service:8091/
+  url: http://user-service:8091/
 account-link-service:
-  url: http://moneymaker-account-link-service:3000/
+  url: http://account-link-service:3000/

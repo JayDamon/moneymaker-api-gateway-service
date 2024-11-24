@@ -10,12 +10,15 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RouteConfig {
 
+    private final String transactionServiceUri;
     private final String userServiceUri;
     private final String plaidServiceUri;
 
     public RouteConfig(
-            @Value("${user-service.url:lb://moneymaker-user-service/}") String userServiceUri,
-            @Value("${account-link-service.url:lb://moneymaker-account-link-service/}") String plaidServiceUri) {
+            @Value("${transaction-service.url:lb://transaction-update-service/}") String transactionServiceUri,
+            @Value("${user-service.url:lb://user-service/}") String userServiceUri,
+            @Value("${account-link-service.url:lb://account-link-service/}") String plaidServiceUri) {
+        this.transactionServiceUri = transactionServiceUri;
         this.userServiceUri = userServiceUri;
         this.plaidServiceUri = plaidServiceUri;
     }
@@ -23,18 +26,16 @@ public class RouteConfig {
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder, TokenRelayGatewayFilterFactory filterFactory
     ) {
-        System.out.println(this.userServiceUri);
-        System.out.println(this.plaidServiceUri);
         return builder.routes()
                 .route(r -> r.path("/v1/accounts/**")
                         .filters(f -> f.filter(filterFactory.apply()))
-                        .uri("lb://moneymaker-account-service/"))
+                        .uri("lb://account-service/"))
                 .route(r -> r.path("/v1/transactions/**")
                         .filters(f -> f.filter(filterFactory.apply()))
-                        .uri("lb://moneymaker-transaction-service/"))
+                        .uri(this.transactionServiceUri))
                 .route(r -> r.path("/v1/budgets/**")
                         .filters(f -> f.filter(filterFactory.apply()))
-                        .uri("lb://moneymaker-budget-service/"))
+                        .uri("lb://budget-service/"))
                 .route(r -> r.path("/v1/users/**")
                         .filters(f -> f.filter(filterFactory.apply()))
                         .uri(this.userServiceUri))
