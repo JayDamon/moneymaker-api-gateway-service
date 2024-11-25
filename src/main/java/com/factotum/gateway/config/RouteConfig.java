@@ -13,14 +13,17 @@ public class RouteConfig {
     private final String transactionServiceUri;
     private final String userServiceUri;
     private final String plaidServiceUri;
+    private final String accountServiceUri;
 
     public RouteConfig(
             @Value("${transaction-service.url:lb://transaction-update-service/}") String transactionServiceUri,
             @Value("${user-service.url:lb://user-service/}") String userServiceUri,
-            @Value("${account-link-service.url:lb://account-link-service/}") String plaidServiceUri) {
+            @Value("${account-link-service.url:lb://account-link-service/}") String plaidServiceUri,
+            @Value("${account-service.url:lb://account-update-service/}") String accountServiceUri1) {
         this.transactionServiceUri = transactionServiceUri;
         this.userServiceUri = userServiceUri;
         this.plaidServiceUri = plaidServiceUri;
+        this.accountServiceUri = accountServiceUri1;
     }
 
     @Bean
@@ -29,7 +32,7 @@ public class RouteConfig {
         return builder.routes()
                 .route(r -> r.path("/v1/accounts/**")
                         .filters(f -> f.filter(filterFactory.apply()))
-                        .uri("lb://account-service/"))
+                        .uri(this.accountServiceUri))
                 .route(r -> r.path("/v1/transactions/**")
                         .filters(f -> f.filter(filterFactory.apply()))
                         .uri(this.transactionServiceUri))

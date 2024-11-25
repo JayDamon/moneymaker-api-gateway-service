@@ -43,8 +43,10 @@ logging:
 ---
 
 transaction-service:
-  url: http://transaction-update-service:8093/
+  url: http://transaction-update-service:3000/
 user-service:
-  url: http://user-service:8091/
+  url: http://user-service:3000/
 account-link-service:
   url: http://account-link-service:3000/
+account-service:
+  url: http://account-update-service:3000/
