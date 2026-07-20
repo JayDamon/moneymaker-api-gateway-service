@@ -6,6 +6,7 @@ workflows:
       - build-and-test:
           context:
             - docker-login
+            - restore-k8s
 
 jobs:
   build-and-test:
