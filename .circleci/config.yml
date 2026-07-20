@@ -38,7 +38,7 @@ jobs:
             npm set prefix=/home/circleci/npm && echo 'export PATH=$HOME/circleci/npm/bin:$PATH' >> /home/circleci/.bashrc
             npm install -g semantic-release @semantic-release/{git,changelog,exec} semantic-release-plus @semantic-release-plus/docker
       - setup_remote_docker:
-          version: docker23
+          version: default
       - run:
           name: Prepare Release
           command: |
